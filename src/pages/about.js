@@ -6,7 +6,8 @@ export default ({ data }) => (
   <Layout>
     <h1>{data.site.siteMetadata.title}</h1>
     <p>
-      Soon upodate
+      We're the only site running on your computer dedicated to showing the best
+      photos and videos of pandas eating lots of food.
     </p>
   </Layout>
 )
