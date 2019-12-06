@@ -5,7 +5,8 @@ module.exports = {
     bright: "#cccccc",
     dark: "#333333",
     gray: "#555555",
-    lightGray: "#bbbbbb",
-    superLightGray: "#dedede"
+    black: '#131415',
+   orange: '#de6c1b',
+   blue: '#e86e27',
   };
   
