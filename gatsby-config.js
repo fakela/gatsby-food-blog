@@ -1,7 +1,7 @@
 
 module.exports = {
   siteMetadata: {
-    title: `Blog`,
+    title: `CodeTalks`,
   },
   plugins: [
     {

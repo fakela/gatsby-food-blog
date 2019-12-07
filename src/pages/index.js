@@ -14,7 +14,7 @@ export default ({ data }) => {
             border-bottom: 1px solid;
           `}
         >
-          Amazing Pandas Eating Things
+          {data.site.siteMetadata.title}
         </h1>
         <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
         {data.allMarkdownRemark.edges.map(({ node }) => (
@@ -51,6 +51,11 @@ export default ({ data }) => {
 
 export const query = graphql`
   query {
+    site{
+      siteMetadata{
+        title
+      }
+    }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       totalCount
       edges {
@@ -69,3 +74,4 @@ export const query = graphql`
     }
   }
 `
+
