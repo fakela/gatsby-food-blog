@@ -2,6 +2,7 @@ import React from "react"
 import { css } from "@emotion/core"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import { rhythm } from "../utils/typography"
+import Link from  "./Header/links"
 
 export default ({ children }) => {
   const data = useStaticQuery(
@@ -40,7 +41,6 @@ query{
         float: right;
       `}
     >
-      About
     </Link>
   
     {children}
