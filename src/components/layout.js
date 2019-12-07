@@ -2,7 +2,7 @@ import React from "react"
 import { css } from "@emotion/core"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import { rhythm } from "../utils/typography"
-import Link from  "./Header/links"
+import Header from './Header'
 
 export default ({ children }) => {
   const data = useStaticQuery(
@@ -16,6 +16,7 @@ query{
 } `
   )
   return (
+    
   <div
     css={css`
       margin: 0 auto;
@@ -24,6 +25,7 @@ query{
       padding-top: ${rhythm(1.5)};
     `}
   >
+    <Header />
     <Link to={`/`}>
       <h3
         css={css`

@@ -2,7 +2,7 @@ import { createTheming } from '@callstack/react-theme-provide';
 import { lighten } from 'polished';
 import colors from './colors'
 
-const themes = {
+const theme = {
     default : {
         themeName: 'defaultColor',
         colors: {
