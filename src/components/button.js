@@ -4,17 +4,17 @@ import { Link } from "gatsby";
 import { useTheme } from '../../styles/theme';
 import { rgba, darken } from 'polished';
 
-const Buttons = ({ to, children, secondary, ...Props }) => {
+const Button = ({ to, children, secondary, ...Props }) => {
     const theme = useTheme()
     const styles = css({
-        display: 'inline-flex',
-        border: 'none',
-        borderRadius: '4px',
-        background: secondary  ? rgba(theme.colors.primary, 0.5)  : theme.colors.primary,
-        color: secondary ? theme.colors.primary : theme.colors.white,
         padding: '10px 10px',
         cursor: 'pointer',
-        transition: 'all 150ms ease',
+        display: 'flex',
+        border: 'none',
+        borderRadius: '5px',
+        background: secondary  ? rgba(theme.colors.primary, 0.5)  : theme.colors.primary,
+        color: secondary ? theme.colors.primary : theme.colors.white,
+        transition: 'all 120ms ease',
         '@media (hover: hover)': {
           ':hover': {
             color: theme.colors.white,
