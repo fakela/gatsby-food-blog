@@ -43,6 +43,7 @@ query{
         float: right;
       `}
     >
+      About
     </Link>
   
     {children}
