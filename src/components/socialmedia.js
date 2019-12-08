@@ -11,7 +11,7 @@ export const Twitter = ({  }) => {
       to={url}
       css={css`
         color: ${theme.colors.text};
-        margin-left: 20px;
+        margin-left: 10px;
         :hover {
           color: ${theme.colors.primary};
         }
@@ -35,14 +35,13 @@ export const Twitter = ({  }) => {
 }
 
 
-
-export const GitHub = ({  }) => {
+export const GitHub = ({ }) => {
   const theme = useTheme()
   return (
     <Link
       to={url}
       css={css`
-        margin-left: 20px;
+        margin-left: 10px;
         color: ${theme.colors.text};
         :hover {
           color: ${theme.colors.primary};

@@ -1,13 +1,13 @@
 import React from 'react'
 import { css } from '@emotion/core'
+import { bpMaxSM } from '../../styles/breakpoint'
 
-
-const LayoutWrapper = props => {
+const Container = props => {
   const {
     maxWidth = 700,
     noHorizontalPadding = false,
     noVerticalPadding = false,
-    ...Props
+    ...restProps
   } = props
   return (
     <div
@@ -17,16 +17,16 @@ const LayoutWrapper = props => {
         max-width: ${maxWidth + (noHorizontalPadding ? 0 : 80)}px;
         padding: ${noVerticalPadding ? 0 : '40'}px
           ${noHorizontalPadding ? 0 : '40'}px;
-       {
+        ${bpMaxSM} {
           padding: ${noVerticalPadding ? 0 : '20'}px
             ${noHorizontalPadding ? 0 : '20'}px;
         }
       `}
-      {...Props}
+      {...restProps}
     >
       {props.children}
     </div>
   )
 }
 
-export default LayoutWrapper
+export default Container

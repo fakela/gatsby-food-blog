@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
-import { css } from '@emotion/core';
-import { useTheme } from '../../styles/theme';
+import React, { useState } from 'react'
+import { css } from '@emotion/core'
+import Container from '../Container'
 
+import { bpMaxSM } from '../../lib/breakpoints'
 
+import { useTheme } from '../Theming'
 
 const Toggle = ({ children }) => {
   const [isToggledOn, setToggle] = useState(false)
@@ -15,7 +17,7 @@ const Toggle = ({ children }) => {
       css={css`
         display: none;
         visibility: hidden;
-        {
+        ${bpMaxSM} {
           display: block;
           visibility: visible;
         }
@@ -91,7 +93,7 @@ const Toggle = ({ children }) => {
             background: ${theme.colors.headerBg};
           `}
         >
-          
+          <Container
             css={css`
               display: flex;
               flex-direction: column;
@@ -113,7 +115,7 @@ const Toggle = ({ children }) => {
             `}
           >
             {children}
-          
+          </Container>
         </div>
       )}
     </div>
