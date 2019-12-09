@@ -19,7 +19,7 @@ const themes = {
             primary: lighten(0.07, colors.orange),
             text: colors.white,
             headerBg: colors.black,
-            limk: lighten(0.07, colors.orange),
+            link: lighten(0.07, colors.orange),
             ...colors,
         },
     },
