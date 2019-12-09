@@ -2,9 +2,9 @@ import React from 'react'
 import Link from './Link'
 import { useTheme } from '../../styles/theme'
 import { css } from '@emotion/core'
+import config from '../../config'
 
-
-export const Twitter = ({  }) => {
+export const Twitter = ({ url = `${config.twitter}` }) => {
   const theme = useTheme()
   return (
     <Link
@@ -35,7 +35,7 @@ export const Twitter = ({  }) => {
 }
 
 
-export const GitHub = ({ }) => {
+export const GitHub = ({ url = `${config.github}`}) => {
   const theme = useTheme()
   return (
     <Link
