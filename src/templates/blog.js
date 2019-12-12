@@ -91,19 +91,19 @@ const Blog = ({
               to={`/${post.fields.slug}`}
               aria-label={`view "${post.frontmatter.title}" article`}
             >
-              Read Article →
+              Read Article ➡️
             </Link>
           </div>
         ))}
         <div css={css({ marginTop: '30px' })}>
           {nextPagePath && (
             <Link to={nextPagePath} aria-label="View next page">
-              Next Page →
+              Next Page ➡️
             </Link>
           )}
           {previousPagePath && (
             <Link to={previousPagePath} aria-label="View previous page">
-              ← Previous Page
+              ⬅️ Previous Page
             </Link>
           )}
         </div>
