@@ -61,7 +61,7 @@ class SignUp extends React.Component {
     } catch (error) {
       this.setState({
         submitted: false,
-        errorMessage: 'Something went wrong!',
+        errorMessage: 'Something went wrongs!',
       })
     }
   }
@@ -80,7 +80,7 @@ class SignUp extends React.Component {
               margin-top: 0;
             `}
           >
-          Sign up for more info
+          Sign up to get the newest blogpost delivered to you!
           </h2>
         )}
 
@@ -146,7 +146,7 @@ class SignUp extends React.Component {
                       aria-label="your first name"
                       aria-required="false"
                       name="first_name"
-                      placeholder="Jane"
+                      placeholder="Favour"
                       type="text"
                     />
                   </label>
@@ -174,7 +174,7 @@ class SignUp extends React.Component {
                       aria-label="your email address"
                       aria-required="true"
                       name="email_address"
-                      placeholder="jane@acme.com"
+                      placeholder="fav@gmail.com"
                       type="email"
                     />
                   </label>
