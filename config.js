@@ -11,8 +11,15 @@ module.exports = {
   // author
   authorName: "Favour Kelvin",
   authorTwitterAccount: "Fakela6",
+
+  // siteFBAppID: '123456789', // Facebook App ID - Optional
+  userTwitter: '@fakela6', // Twitter Username
+  ogSiteName: 'Gatsby Starter Blog', // Facebook Site Name
+  ogLanguage: 'en_US',
+  googleAnalyticsID: '',
+
   // info
-  infoTitle: "Favour Kelvon",        
+  infoTitle: "Favour Kelvin",        
   // contact
   contactEmail: "favourkelvin17@gmail.com",
   // social
