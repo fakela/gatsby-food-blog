@@ -1,8 +1,8 @@
 ---
-slug: demo-05
-date: 2018-08-22
-title: 'Do Less Better'
-description: 'Vestibulum quis bibendum nulla, dignissim faucibus orci. Sed purus nisl, hendrerit id suscipit sit amet.'
+slug: number 4
+date: 2019-12-22
+title: 'Changing soon'
+description: 'Vestibulum quis bibendum nulla'
 published: true
 banner: './img.jpg'
 ---

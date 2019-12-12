@@ -1,8 +1,8 @@
 ---
-slug: demo-08
-date: 2010-10-05
+slug: number 7
+date: 2019-12-29
 title: 'Lorem ipsum dolor sit amet'
-description: 'Ut elementum urna quis ex porta, eu porta ante porta. Curabitur a lectus fringilla, condimentum sem eu, efficitur ligula.'
+description: 'Ut elementum urna quis ex porta, eu porta ante porta.'
 published: true
 banner: './img.jpg'
 ---

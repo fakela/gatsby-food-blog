@@ -1,8 +1,8 @@
 ---
-slug: demo-03
-date: 2018-02-01
-title: 'The One Time And The One Thing'
-description: 'Morbi ut dapibus sem. Interdum et malesuada fames ac ante ipsum primis in faucibus.'
+slug: number 3
+date: 2019-12-12
+title: 'Changing soon'
+description: 'Morbi ut dapibus sem.'
 published: true
 banner: './img.jpg'
 ---

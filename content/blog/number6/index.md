@@ -1,8 +1,8 @@
 ---
-slug: demo-07
-date: 2010-10-05
+slug: number 6
+date: 2018-12-30
 title: 'Lorem ipsum dolor sit amet'
-description: 'Aliquam at mauris leo. Duis neque eros, malesuada non mauris eget, volutpat imperdiet enim.'
+description: 'Aliquam at mauris leo.'
 published: true
 banner: './img.jpg'
 ---
