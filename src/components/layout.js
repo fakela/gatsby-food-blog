@@ -10,6 +10,7 @@ import mdxComponents from './mdx'
 import Header from './Header'
 import { fonts } from '../utils/typography'
 import Footer from '../components/Footer'
+import config from '../../config'
 
 const getGlobalStyles = theme => {
   return css`
@@ -129,13 +130,8 @@ const getGlobalStyles = theme => {
   `
 }
 
-export default ({
-  site,
-  frontmatter = {},
-  children,
-  noFooter,
-  noSubscribeForm,
-}) => {
+export default ({ site,frontmatter = {},children,noFooter,noSubscribeForm,}) => {
+
   const initializeTheme = () => {
     if (typeof window !== 'undefined') {
       return localStorage.getItem('theme') || 'default'
@@ -151,21 +147,14 @@ export default ({
   }, [themeName])
 
   const toggleTheme = name => setTheme(name)
-  const theme = {
-    ...themes[themeName],
-    toggleTheme: toggleTheme,
-  }
-  const {
-    description: siteDescription,
-    keywords: siteKeywords,
-  } = site.siteMetadata
+  const theme = { ...themes[themeName],toggleTheme: toggleTheme,}
 
-  const {
-    keywords: frontmatterKeywords,
-    description: frontmatterDescription,
-  } = frontmatter
+  const {description: siteDescription,keywords: siteKeywords,} = site.siteMetadata
+
+  const {keywords: frontmatterKeywords,description: frontmatterDescription} = frontmatter
 
   const keywords = (frontmatterKeywords || siteKeywords).join(', ')
+  
   const description = frontmatterDescription || siteDescription
 
   return (
@@ -182,7 +171,7 @@ export default ({
           `}
         >
           <Helmet
-            title={}
+            title={config.siteTitle}
             meta={[
               { name: 'description', content: description },
               { name: 'keywords', content: keywords },

@@ -5,8 +5,7 @@ import { css } from '@emotion/core'
 import { withTheme } from '../../../styles/breakpoint'
 import { rhythm } from '../../utils/typography'
 import { bpMaxSM } from '../../../styles/breakpoint'
-import Message from '../ConfirmMessage/Message'
-import { PleaseConfirmIllustration } from '../ConfirmMessage/Illustrations'
+
 
 const FORM_ID = process.env.CONVERTKIT_SIGNUP_FORM
 
@@ -22,11 +21,11 @@ const SubscribeSchema = Yup.object().shape({
 const PostSubmissionMessage = ({ response }) => {
   return (
     <div>
-      <Message
+      {/* <Message
         illustration={PleaseConfirmIllustration}
         title={`Great`}
         body={`I just sent you an email with the confirmation link.`}
-      />
+      /> */}
     </div>
   )
 }
@@ -61,7 +60,7 @@ class SignUp extends React.Component {
     } catch (error) {
       this.setState({
         submitted: false,
-        errorMessage: 'Something went wrong!',
+        errorMessage: 'Something went wrongs!',
       })
     }
   }
@@ -80,7 +79,7 @@ class SignUp extends React.Component {
               margin-top: 0;
             `}
           >
-          Sign up for more info
+          Sign up to get the newest blogpost delivered to you!
           </h2>
         )}
 
@@ -146,7 +145,7 @@ class SignUp extends React.Component {
                       aria-label="your first name"
                       aria-required="false"
                       name="first_name"
-                      placeholder="Jane"
+                      placeholder="Favour"
                       type="text"
                     />
                   </label>
@@ -174,7 +173,7 @@ class SignUp extends React.Component {
                       aria-label="your email address"
                       aria-required="true"
                       name="email_address"
-                      placeholder="jane@acme.com"
+                      placeholder="fav@gmail.com"
                       type="email"
                     />
                   </label>
