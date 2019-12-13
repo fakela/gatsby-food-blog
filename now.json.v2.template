@@ -15,8 +15,7 @@
     }
   ],
   "routes": [
-    {"src": "^/public/static/(.*)", "headers": {"cache-control": "public,max-age=31536000,immutable"} },
+  
     {"src": "^/(.*).(css|js)", "headers": {"cache-control": "public,max-age=31536000,immutable"} },
-    {"src": "^/(.*).html", "headers": {"cache-control": "public,max-age=0,must-revalidate"} }
-  ]
+   
 }
