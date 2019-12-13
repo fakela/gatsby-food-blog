@@ -5,7 +5,6 @@ This is based on Robin Wieruch's https://github.com/eggheadio/gatsby-starter-egg
 
 A starter project in [Gatsby.js](https://www.gatsbyjs.org/) with [MDX](https://github.com/mdx-js/mdx).
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/eggheadio/gatsby-starter-egghead-blog)
 
 ## Features
 
@@ -18,7 +17,14 @@ A starter project in [Gatsby.js](https://www.gatsbyjs.org/) with [MDX](https://g
 - Social media share buttons
 - Site & Theme config files
 - ConvertKit subscribe form (Formik and Yup)
-
+- Customizable
+- Easy editable content in Markdown files (posts, pages and parts)
+- Easily restyled through theme object
+- RSS feed
+- Toggle theme mode
+- Social sharing (Twitter, Facebook)
+- PWA (manifest.json, offline support)
+- Prettier code styling
 
 ## [➞ Demo](/http://gatsby-fakela-food-blog.surge.sh/)
 
