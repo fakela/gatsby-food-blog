@@ -1,6 +1,6 @@
 # Fakela MDX Food Blog Starter Project
 
-This is based on Robin Wieruch's https://github.com/eggheadio/gatsby-starter-egghead-blog.git
+This is based on Egghead.io https://github.com/eggheadio/gatsby-starter-egghead-blog.git
 
 
 A starter project in [Gatsby.js](https://www.gatsbyjs.org/) with [MDX](https://github.com/mdx-js/mdx).
