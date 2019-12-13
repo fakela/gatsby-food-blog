@@ -38,7 +38,7 @@ const Hero = () => {
             max-width: ${rhythm(15)};
           `}
         >
-          Your blog says the things you want to say.
+       Food Blog
         </h1>
       </Container>
       <div
@@ -107,7 +107,7 @@ export default function Index({ data: { site, allMdx } }) {
             >
               <div>
             <Img
-              sizes={post.frontmatter.banner. childImageSharp.sizes}
+              sizes={post.frontmatter.img. childImageSharp.sizes}
               alt={post.frontmatter.title}
               style={{ width: "19%", marginRight: 20,float: "left" }}
             />
@@ -176,7 +176,7 @@ export const pageQuery = graphql`
             title
             date(formatString: "MMMM DD, YYYY")
             description
-            banner {
+            img {
               childImageSharp {
                 sizes(maxWidth: 720) {
                   ...GatsbyImageSharpSizes
