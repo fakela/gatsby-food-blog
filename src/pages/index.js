@@ -1,77 +1,193 @@
-import React from "react"
-import { css } from "@emotion/core"
-import { Link, graphql } from "gatsby"
-import { rhythm } from "../utils/typography"
-import Layout from "../components/layout"
+import React from 'react'
+import { graphql } from 'gatsby'
+import { css } from '@emotion/core'
+import styled from '@emotion/styled'
+import Layout from 'components/Layout'
+import Link from 'components/Link'
+import { useTheme } from 'components/Theming'
+import Container from 'components/Container'
+import { rhythm } from '../lib/typography'
+import Sidebar from 'components/Sidebar'
+import Img from 'gatsby-image'
 
-export default ({ data }) => {
+const Hero = () => {
+  const theme = useTheme()
   return (
-    <Layout>
-      <div>
+    <section
+      css={css`
+        color: ${theme.colors.white};
+        width: 100%; 
+        background: ${theme.colors.primary};
+        padding: 20px 0 30px 0;
+        display: flex;
+      `}
+    >
+      <Container
+        css={css`
+          display: flex;
+          flex-direction: column;
+        `}
+      >
         <h1
           css={css`
-            display: inline-block;
-            border-bottom: 1px solid;
+            color: ${theme.colors.white};
+            position: relative;
+            z-index: 5;
+            line-height: 1.5;
+            margin: 0;
+            max-width: ${rhythm(15)};
           `}
         >
-          {data.site.siteMetadata.title}
+          Your blog says the things you want to say.
         </h1>
-        <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id}>
-            <Link
-              to={node.fields.slug}
-              css={css`
-                text-decoration: none;
-                color: inherit;
-              `}
+      </Container>
+      <div
+        css={css`
+          height: 150px;
+          overflow: hidden;
+        `}
+      />
+    </section>
+  )
+}
+
+const Description = styled.p`
+  margin-bottom: 10px;
+  display: inline-block;
+`
+
+export default function Index({ data: { site, allMdx } }) {
+  const theme = useTheme()
+  return (
+    <Layout site={site}>
+      <Hero />
+      <Container
+        css={css`
+          padding-bottom: 0;
+        `}
+      >
+        {allMdx.edges.map(({ node: post }) => (
+          <div
+            key={post.id}
+            css={css`
+              margin-bottom: 40px;
+            `}
+          >
+            <h2
+              css={css({
+                marginBottom: rhythm(0.3),
+                transition: 'all 150ms ease',
+                ':hover': {
+                  color: theme.colors.primary,
+                },
+              })}
             >
-              <h3
-                css={css`
-                  margin-bottom: ${rhythm(1 / 4)};
-                `}
+              <Link
+                to={post.frontmatter.slug}
+                aria-label={`View ${post.frontmatter.title}`}
               >
-                {node.frontmatter.title}{" "}
-                <span
-                  css={css`
-                    color: #bbb;
-                  `}
-                >
-                  — {node.frontmatter.date}
-                </span>
-              </h3>
-              <p>{node.excerpt}</p>
-            </Link>
+
+                {post.frontmatter.title}
+
+              
+              </Link>
+            </h2>
+            <h3>
+            <p
+             css={css`
+             font-size: 16px;
+             margin-top: 9px;
+           `}
+            >{post.frontmatter.date}</p>
+            </h3>
+            <Description
+            css={css`
+            line-height: 1.8;
+          `}
+            >
+              <div>
+            <Img
+              sizes={post.frontmatter.banner. childImageSharp.sizes}
+              alt={post.frontmatter.title}
+              style={{ width: "19%", marginRight: 20,float: "left" }}
+            />
+            </div>
+              {post.excerpt}{' '}
+              <Link
+                to={post.frontmatter.slug}
+                aria-label={`View ${post.frontmatter.title}`}
+              >
+                Read Article →
+              </Link>
+            </Description>
           </div>
         ))}
-      </div>
+        <Link to="/blog" aria-label="Visit blog page">
+          View all articles
+        </Link>
+        <div
+        css={css`
+        display: flex;
+      `}
+        >
+        <Sidebar
+                  title="Codestack"
+                  description="Articles on React and Node.js. All articles are written by Emmanuel Yusufu, Fullstack Web Development."
+                />
+                <Sidebar
+                  title="About author"
+                  description="Emmanuel Yusufu is a Full-stack Web Developer specializing in React and Node.js based in Nigeria."
+                />
+        <hr />
+        </div>
+      </Container>
     </Layout>
   )
 }
 
-export const query = graphql`
+export const pageQuery = graphql`
   query {
-    site{
-      siteMetadata{
+    site {
+      ...site
+      siteMetadata {
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      totalCount
+    allMdx(
+      limit: 5
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { published: { ne: false } } }
+    ) {
       edges {
         node {
+          excerpt(pruneLength: 190)
           id
+          fields {
+            title
+            slug
+            date
+          }
+          parent {
+            ... on File {
+              sourceInstanceName
+            }
+          }
           frontmatter {
             title
-            date(formatString: "DD MMMM, YYYY")
-          }
-          fields {
+            date(formatString: "MMMM DD, YYYY")
+            description
+            banner {
+              childImageSharp {
+                sizes(maxWidth: 720) {
+                  ...GatsbyImageSharpSizes
+                }
+              }
+            }
             slug
+            keywords
           }
-          excerpt
         }
       }
     }
   }
 `
-
