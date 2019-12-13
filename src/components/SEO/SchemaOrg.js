@@ -58,12 +58,6 @@ export default React.memo(
               '@type': 'Person',
               name: author.name,
             },
-            publisher: {
-              '@type': 'Organization',
-              url: organization.url,
-              logo: organization.logo,
-              name: organization.name,
-            },
             mainEntityOfPage: {
               '@type': 'WebSite',
               '@id': canonicalUrl,
