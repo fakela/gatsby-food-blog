@@ -3,7 +3,7 @@ module.exports = {
   siteTitle: ' A personal stater blog', // Navigation and Site Title
   siteTitleAlt: 'A gatsby starter blog', // Alternative Site title for SEO
   siteTitleShort: 'Starter Blog', // short_name for manifest
-  siteUrl: 'https://your-site.io', // Domain of your site. No trailing slash!
+  siteUrl: 'https://github.com/fakela/gatsby-personal-blog-starter.git', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
   siteDescription: 'This is a food blog!',
   author: 'Author', // Author for schemaORGJSONLD
