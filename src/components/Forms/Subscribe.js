@@ -23,9 +23,9 @@ const PostSubmissionMessage = ({ response }) => {
     <div>
       <Message
         illustration={PleaseConfirmIllustration}
-        title={`Great, one last thing...`}
-        body={`I just sent you an email with the confirmation link. 
-          **Please check your inbox!**`}
+        title={`Great 😀,one more thing...`}
+        body={`An email has been sent with the confirmation link. 
+        **Please check your inbox!**`}
       />
     </div>
   )
