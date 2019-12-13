@@ -2,9 +2,9 @@ import React from 'react'
 import { Formik, Field, Form, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
 import { css } from '@emotion/core'
-import { withTheme } from '../../../styles/breakpoint'
-import { rhythm } from '../../utils/typography'
-import { bpMaxSM } from '../../../styles/breakpoint'
+import { withTheme } from '../Theming'
+import { rhythm } from '../../lib/typography'
+import { bpMaxSM } from '../../lib/breakpoints'
 
 
 const FORM_ID = process.env.CONVERTKIT_SIGNUP_FORM
@@ -16,15 +16,14 @@ const SubscribeSchema = Yup.object().shape({
   first_name: Yup.string(),
 })
 
-//USE OF FORMIK TO CREATE FORMS IN REACT
-
 const PostSubmissionMessage = ({ response }) => {
   return (
     <div>
       {/* <Message
         illustration={PleaseConfirmIllustration}
-        title={`Great`}
-        body={`I just sent you an email with the confirmation link.`}
+        title={`Great, one last thing...`}
+        body={`I just sent you an email with the confirmation link. 
+          **Please check your inbox!**`}
       /> */}
     </div>
   )
@@ -60,7 +59,7 @@ class SignUp extends React.Component {
     } catch (error) {
       this.setState({
         submitted: false,
-        errorMessage: 'Something went wrongs!',
+        errorMessage: 'Something went wrong!',
       })
     }
   }
@@ -79,7 +78,7 @@ class SignUp extends React.Component {
               margin-top: 0;
             `}
           >
-          Sign up to get the newest blogpost delivered to you!
+            Subscribe 👍
           </h2>
         )}
 
@@ -145,7 +144,7 @@ class SignUp extends React.Component {
                       aria-label="your first name"
                       aria-required="false"
                       name="first_name"
-                      placeholder="Favour"
+                      placeholder="Fav"
                       type="text"
                     />
                   </label>

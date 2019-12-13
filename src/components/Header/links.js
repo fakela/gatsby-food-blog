@@ -10,10 +10,10 @@ export default () => {
       <Link to="#" activeClassName="active" aria-label="View blog page">
         Blog
       </Link>
-      <Link to="#" activeClassName="active" aria-label="View blog page">
-        About
+      <Link to="/messages" activeClassName="active" aria-label="View blog page">
+        Subscribe
       </Link>
-      <Link to="#" activeClassName="active" aria-label="View blog page">
+      <Link to="/subscribe" activeClassName="active" aria-label="View blog page">
         Contact
       </Link>
 

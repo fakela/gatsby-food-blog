@@ -15,7 +15,12 @@ const Code = ({children, codeString, className = 'language-js', ...props }) => {
     )
   } else {
     return (
-      <Highlight {...defaultProps}  code={children.trim()} language={language} theme={theme} >
+      <Highlight
+        {...defaultProps}
+        code={children.trim()}
+        language={language}
+        theme={theme}
+      >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
           <pre className={className} style={{ ...style, padding: '20px' }}>
             {tokens.map((line, i) => (

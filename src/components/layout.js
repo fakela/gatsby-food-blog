@@ -4,13 +4,14 @@ import { graphql } from 'gatsby'
 import { MDXProvider } from '@mdx-js/react'
 import { lighten } from 'polished'
 import { Global, css } from '@emotion/core'
-import { ThemeProvider, themes } from '../../styles/theme'
-import { bpMaxSM } from '../../styles/breakpoint'
+import { ThemeProvider, themes } from './Theming'
+import { bpMaxSM } from '../lib/breakpoints'
 import mdxComponents from './mdx'
 import Header from './Header'
-import { fonts } from '../utils/typography'
+import reset from '../lib/reset'
+import { fonts } from '../lib/typography'
+import config from '../../config/website'
 import Footer from '../components/Footer'
-import config from '../../config'
 
 const getGlobalStyles = theme => {
   return css`
@@ -130,8 +131,13 @@ const getGlobalStyles = theme => {
   `
 }
 
-export default ({ site,frontmatter = {},children,noFooter,noSubscribeForm,}) => {
-
+export default ({
+  site,
+  frontmatter = {},
+  children,
+  noFooter,
+  noSubscribeForm,
+}) => {
   const initializeTheme = () => {
     if (typeof window !== 'undefined') {
       return localStorage.getItem('theme') || 'default'
@@ -147,20 +153,27 @@ export default ({ site,frontmatter = {},children,noFooter,noSubscribeForm,}) => 
   }, [themeName])
 
   const toggleTheme = name => setTheme(name)
-  const theme = { ...themes[themeName],toggleTheme: toggleTheme,}
+  const theme = {
+    ...themes[themeName],
+    toggleTheme: toggleTheme,
+  }
+  const {
+    description: siteDescription,
+    keywords: siteKeywords,
+  } = site.siteMetadata
 
-  const {description: siteDescription,keywords: siteKeywords,} = site.siteMetadata
-
-  const {keywords: frontmatterKeywords,description: frontmatterDescription} = frontmatter
+  const {
+    keywords: frontmatterKeywords,
+    description: frontmatterDescription,
+  } = frontmatter
 
   const keywords = (frontmatterKeywords || siteKeywords).join(', ')
-  
   const description = frontmatterDescription || siteDescription
 
   return (
     <ThemeProvider theme={theme}>
       <Fragment>
-        <Global styles={(theme)} />
+        <Global styles={reset()} />
         <Global styles={getGlobalStyles(theme)} />
         <div
           css={css`

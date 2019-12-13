@@ -75,6 +75,7 @@ const SEO = ({ postData, frontmatter = {}, postImage, isBlogPost }) => (
             datePublished={datePublished}
             canonicalUrl={seo.canonicalUrl}
             author={seo.author}
+            organization={seo.organization}
             defaultTitle={seo.title}
           />
         </React.Fragment>

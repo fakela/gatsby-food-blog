@@ -1,10 +1,10 @@
 import React from 'react'
 import { css } from '@emotion/core'
-import { useTheme } from '../../styles/theme'
+import { useTheme } from './Theming'
 
 import { TwitterShareButton, FacebookShareButton } from 'react-share'
 
-const ShareMedia = ({ url, title, twitterHandle }) => {
+const Share = ({ url, title, twitterHandle }) => {
   const theme = useTheme()
   return (
     <div
@@ -13,7 +13,7 @@ const ShareMedia = ({ url, title, twitterHandle }) => {
         align-items: center;
         justify-content: flex-start;
         div {
-          margin-right: 18px;
+          margin-right: 20px;
           cursor: pointer;
           :hover {
             color: ${theme.colors.primary};
@@ -23,18 +23,18 @@ const ShareMedia = ({ url, title, twitterHandle }) => {
           margin-right: 20px;
           font-size: 70%;
           text-transform: uppercase;
-          line-height: 2.0;
-          opacity: 0.9;
+          line-height: 2.5;
+          opacity: 0.7;
         }
       `}
     >
       <div
         css={css`
           flex-grow: 1;
-          border-top: 1px solid ${theme.colors.black};
+          border-top: 1px solid ${theme.colors.gray};
         `}
       />
-      <span>You could share this 😀</span>
+      <span>Share article</span>
       <TwitterShareButton
         url={url}
         quote={title}
@@ -56,4 +56,4 @@ const ShareMedia = ({ url, title, twitterHandle }) => {
   )
 }
 
-export default ShareMedia
+export default Share

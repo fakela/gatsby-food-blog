@@ -18,7 +18,6 @@ const Hero = () => {
         color: ${theme.colors.white};
         width: 100%; 
         background: ${theme.colors.primary};
-        padding: 20px 0 30px 0;
         display: flex;
       `}
     >
@@ -35,10 +34,11 @@ const Hero = () => {
             z-index: 5;
             line-height: 1.5;
             margin: 0;
-            max-width: ${rhythm(15)};
+            max-width: ${rhythm(12)};
           `}
         >
-       Food Blog
+         Food Blog Little Sweet Taste😋 🥘😋
+         
         </h1>
       </Container>
       <div
@@ -107,9 +107,9 @@ export default function Index({ data: { site, allMdx } }) {
             >
               <div>
             <Img
-              sizes={post.frontmatter.img. childImageSharp.sizes}
+              sizes={post.frontmatter.banner. childImageSharp.sizes}
               alt={post.frontmatter.title}
-              style={{ width: "19%", marginRight: 20,float: "left" }}
+              style={{ width: "15%", marginRight: 20,float: "left" }}
             />
             </div>
               {post.excerpt}{' '}
@@ -117,26 +117,29 @@ export default function Index({ data: { site, allMdx } }) {
                 to={post.frontmatter.slug}
                 aria-label={`View ${post.frontmatter.title}`}
               >
-                Read Article →
+                Read Article ➡️
               </Link>
             </Description>
           </div>
         ))}
-        <Link to="/blog" aria-label="Visit blog page">
-          View all articles
+        <Link to="/blog" aria-label="Visit blog page"
+        >
+          Read all articles
         </Link>
         <div
         css={css`
         display: flex;
+        padding-top: 23px;
+        padding-bottom:23px;
       `}
         >
         <Sidebar
-                  title="Codestack"
-                  description="Articles on React and Node.js. All articles are written by Emmanuel Yusufu, Fullstack Web Development."
+                  title="Food Blog"
+                  description="Articles on Food and Recipes. All articles are written by Favour Kelvin."
                 />
                 <Sidebar
                   title="About author"
-                  description="Emmanuel Yusufu is a Full-stack Web Developer specializing in React and Node.js based in Nigeria."
+                  description="Favour Kelvin is a Front-end Web Developer based in Nigeria."
                 />
         <hr />
         </div>
@@ -176,7 +179,7 @@ export const pageQuery = graphql`
             title
             date(formatString: "MMMM DD, YYYY")
             description
-            img {
+            banner {
               childImageSharp {
                 sizes(maxWidth: 720) {
                   ...GatsbyImageSharpSizes
