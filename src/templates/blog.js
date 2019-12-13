@@ -1,185 +1,150 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { css } from '@emotion/core'
-import styled from '@emotion/styled'
-import Layout from 'components/Layout'
-import Link from 'components/Link'
-import { useTheme } from 'components/Theming'
-import Container from 'components/Container'
-import { rhythm } from '../lib/typography'
-import Sidebar from 'components/Sidebar'
 import Img from 'gatsby-image'
+import { css } from '@emotion/core'
+import Container from 'components/Container'
+import SEO from '../components/SEO'
+import Layout from '../components/Layout'
+import Link from '../components/Link'
+import { bpMaxSM, bpMaxMD } from '../lib/breakpoints'
 
-const Hero = () => {
-  const theme = useTheme()
-  return (
-    <section
-      css={css`
-        color: ${theme.colors.white};
-        width: 100%; 
-        background: ${theme.colors.primary};
-        padding: 20px 0 30px 0;
-        display: flex;
-      `}
-    >
-      <Container
-        css={css`
-          display: flex;
-          flex-direction: column;
-        `}
-      >
-        <h1
-          css={css`
-            color: ${theme.colors.white};
-            position: relative;
-            z-index: 5;
-            line-height: 1.5;
-            margin: 0;
-            max-width: ${rhythm(15)};
-          `}
-        >
-          Your blog says the things you want to say.
-        </h1>
-      </Container>
-      <div
-        css={css`
-          height: 150px;
-          overflow: hidden;
-        `}
-      />
-    </section>
-  )
-}
+const Blog = ({
+  data: { site, allMdx },
+  pageContext: { pagination, categories },
+}) => {
+  const { page, nextPagePath, previousPagePath } = pagination
 
-const Description = styled.p`
-  margin-bottom: 10px;
-  display: inline-block;
-`
+  const posts = page
+    .map(id => allMdx.edges.find(edge => edge.node.id === id))
+    .filter(post => post !== undefined)
 
-export default function Index({ data: { site, allMdx } }) {
-  const theme = useTheme()
   return (
     <Layout site={site}>
-      <Hero />
-      <Container
-        css={css`
-          padding-bottom: 0;
-        `}
-      >
-        {allMdx.edges.map(({ node: post }) => (
+      <SEO />
+      <Container noVerticalPadding>
+        {posts.map(({ node: post }) => (
           <div
             key={post.id}
             css={css`
-              margin-bottom: 40px;
+              :not(:first-of-type) {
+                margin-top: 60px;
+                ${bpMaxMD} {
+                  margin-top: 40px;
+                }
+                ${bpMaxSM} {
+                  margin-top: 20px;
+                }
+              }
+              :first-of-type {
+                margin-top: 20px;
+                ${bpMaxSM} {
+                  margin-top: 20px;
+                }
+              }
+              .gatsby-image-wrapper {
+              }
+              ${bpMaxSM} {
+                padding: 20px;
+              }
+              display: flex;
+              flex-direction: column;
             `}
           >
+            {post.frontmatter.banner && (
+              <div
+                css={css`
+                  padding: 60px 60px 40px 60px;
+                  ${bpMaxSM} {
+                    padding: 20px;
+                  }
+                `}
+              >
+                <Link
+                  aria-label={`View ${post.frontmatter.title} article`}
+                  to={`/${post.fields.slug}`}
+                >
+                  <Img sizes={post.frontmatter.banner.childImageSharp.fluid} />
+                </Link>
+              </div>
+            )}
             <h2
-              css={css({
-                marginBottom: rhythm(0.3),
-                transition: 'all 150ms ease',
-                ':hover': {
-                  color: theme.colors.primary,
-                },
-              })}
+              css={css`
+                margin-top: 30px;
+                margin-bottom: 10px;
+              `}
             >
               <Link
-                to={post.frontmatter.slug}
-                aria-label={`View ${post.frontmatter.title}`}
+                aria-label={`View ${post.frontmatter.title} article`}
+                to={`/${post.fields.slug}`}
               >
-
                 {post.frontmatter.title}
-
-              
               </Link>
             </h2>
-            <h3>
+            {/* <small>{post.frontmatter.date}</small> */}
             <p
-             css={css`
-             font-size: 16px;
-             margin-top: 9px;
-           `}
-            >{post.frontmatter.date}</p>
-            </h3>
-            <Description
-            css={css`
-            line-height: 1.8;
-          `}
+              css={css`
+                margin-top: 10px;
+              `}
             >
-              <div>
-            <Img
-              sizes={post.frontmatter.banner. childImageSharp.sizes}
-              alt={post.frontmatter.title}
-              style={{ width: "19%", marginRight: 20,float: "left" }}
-            />
-            </div>
-              {post.excerpt}{' '}
-              <Link
-                to={post.frontmatter.slug}
-                aria-label={`View ${post.frontmatter.title}`}
-              >
-                Read Article →
-              </Link>
-            </Description>
+              {post.excerpt}
+            </p>{' '}
+            <Link
+              to={`/${post.fields.slug}`}
+              aria-label={`view "${post.frontmatter.title}" article`}
+            >
+              Read Article ➡️
+            </Link>
           </div>
         ))}
-        <Link to="/blog" aria-label="Visit blog page">
-          View all articles
-        </Link>
-        <div
-        css={css`
-        display: flex;
-      `}
-        >
-        <Sidebar
-                  title="Codestack"
-                  description="Articles on React and Node.js. All articles are written by Emmanuel Yusufu, Fullstack Web Development."
-                />
-                <Sidebar
-                  title="About author"
-                  description="Emmanuel Yusufu is a Full-stack Web Developer specializing in React and Node.js based in Nigeria."
-                />
-        <hr />
+        <div css={css({ marginTop: '30px' })}>
+          {nextPagePath && (
+            <Link to={nextPagePath} aria-label="View next page">
+              Next Page ➡️
+            </Link>
+          )}
+          {previousPagePath && (
+            <Link to={previousPagePath} aria-label="View previous page">
+              ⬅️ Previous Page
+            </Link>
+          )}
         </div>
+        <hr
+          css={css`
+            margin: 50px 0;
+          `}
+        />
       </Container>
     </Layout>
   )
 }
 
+export default Blog
+
 export const pageQuery = graphql`
   query {
     site {
       ...site
-      siteMetadata {
-        title
-      }
     }
     allMdx(
-      limit: 5
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { published: { ne: false } } }
+      filter: { fields: { isPost: { eq: true } } }
     ) {
       edges {
         node {
-          excerpt(pruneLength: 190)
+          excerpt(pruneLength: 300)
           id
           fields {
             title
             slug
             date
           }
-          parent {
-            ... on File {
-              sourceInstanceName
-            }
-          }
           frontmatter {
             title
             date(formatString: "MMMM DD, YYYY")
-            description
             banner {
               childImageSharp {
-                sizes(maxWidth: 720) {
-                  ...GatsbyImageSharpSizes
+                fluid(maxWidth: 600) {
+                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
               }
             }
