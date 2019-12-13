@@ -16,7 +16,7 @@ module.exports = {
   googleAnalyticsID: '',
 
   // Manifest and Progress color
-  themeColor: '#a85032',
+  // themeColor: '#a85032',
   backgroundColor: '#2b2e3c',
 
   // Social component
