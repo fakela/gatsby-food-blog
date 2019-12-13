@@ -32,12 +32,12 @@ const Hero = () => {
             color: ${theme.colors.white};
             position: relative;
             z-index: 5;
-            line-height: 1.5;
+            line-height: 2.0;
             margin: 0;
-            max-width: ${rhythm(12)};
+            max-width: ${rhythm(20)};
           `}
         >
-         Food Blog Little Sweet Taste😋 🥘😋
+         Food Blog Sweet Taste😋 🥘😋
          
         </h1>
       </Container>

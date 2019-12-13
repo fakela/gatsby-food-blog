@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+
+
 export default class HTML extends React.Component {
   render() {
     return (
@@ -12,6 +14,9 @@ export default class HTML extends React.Component {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
+          <link rel="icon" 
+      type="image/png" 
+      href="static/images/logo.png"></link>
           {this.props.headComponents}
         </head>
         <body {...this.props.bodyAttributes}>
