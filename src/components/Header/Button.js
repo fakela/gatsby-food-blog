@@ -9,12 +9,13 @@ const Button = ({ to, children, secondary, ...restProps }) => {
   const styles = css({
     display: 'inline-flex',
     border: 'none',
-    borderRadius: '4px',
+    borderRadius: '5px',
     background: secondary
       ? rgba(theme.colors.primary, 0.1)
       : theme.colors.primary,
     color: secondary ? theme.colors.primary : theme.colors.white,
     padding: '10px 15px',
+    marginBottom: '8px',
     cursor: 'pointer',
     transition: 'all 150ms ease',
     '@media (hover: hover)': {
