@@ -25,6 +25,7 @@ A starter project in [Gatsby.js](https://www.gatsbyjs.org/) with [MDX](https://g
 - Social sharing (Twitter, Facebook)
 - PWA (manifest.json, offline support)
 - Prettier code styling
+- GraphQl
 
 ## [➞ Demo](http://gatsby-fakela-food-blog.surge.sh/)
 

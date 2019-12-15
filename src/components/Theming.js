@@ -6,22 +6,22 @@ const themes = {
   default: {
     themeName: 'default',
     colors: {
-      primary: colors.blue,
+      primary: colors.orange,
       text: colors.black,
       bodyBg: colors.gray,
-      headerBg: colors.blue,
-      link: colors.blue,
+      headerBg: colors.orange,
+      link: colors.orange,
       ...colors,
     },
   },
   dark: {
     themeName: 'dark',
     colors: {
-      primary: lighten(0.05, colors.blue),
+      primary: lighten(0.05, colors.orange),
       text: colors.white,
       bodyBg: colors.black,
       headerBg: colors.black,
-      link: lighten(0.05, colors.blue),
+      link: lighten(0.05, colors.orange),
       ...colors,
     },
   },

@@ -69,18 +69,19 @@ module.exports = {
         background_color: config.backgroundColor,
         theme_color: config.themeColor,
         display: 'standalone',
-        icons: [
-          {
-            src: '/android-chrome-192x192.png',
-            sizes: '192x192',
-            type: 'image/png',
-          },
-          {
-            src: '/android-chrome-512x512.png',
-            sizes: '512x512',
-            type: 'image/png',
-          },
-        ],
+        icon: `static/images/logo.png`, // This path is relative to the root of the site.
+  icons: [
+    {
+      src: `/favicons/android-chrome-192x192.png`,
+      sizes: `192x192`,
+      type: `image/png`,
+    },
+    {
+      src: `/favicons/android-chrome-512x512.png`,
+      sizes: `512x512`,
+      type: `image/png`,
+    },
+  ],
       },
     },
     {
