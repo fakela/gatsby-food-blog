@@ -97,6 +97,7 @@ const getGlobalStyles = theme => {
       border: none;
       color: ${theme.colors.white};
       padding: 5px 10px;
+      margin-bottom: 8px;
       cursor: pointer;
       border: 1px solid ${theme.colors.primary};
       transition: all 150ms;
