@@ -1,8 +1,8 @@
 import React from 'react'
 import { css } from '@emotion/core'
 import { useTheme } from './Theming'
+import { Twitter, LinkedIn} from './Social'
 
-import { TwitterShareButton, FacebookShareButton } from 'react-share'
 
 const Share = ({ url, title, twitterHandle }) => {
   const theme = useTheme()
@@ -35,23 +35,9 @@ const Share = ({ url, title, twitterHandle }) => {
         `}
       />
       <span>Share article</span>
-      <TwitterShareButton
-        url={url}
-        quote={title}
-        via={twitterHandle.split('@').join('')}
-      >
-        Twitter
-      </TwitterShareButton>
-      <FacebookShareButton
-        url={url}
-        quote={title}
-        via={twitterHandle.split('@').join('')}
-        css={css`
-          cursor: pointer;
-        `}
-      >
-        Facebook
-      </FacebookShareButton>
+      
+      <Twitter />
+      <LinkedIn />
     </div>
   )
 }

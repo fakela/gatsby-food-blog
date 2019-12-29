@@ -10,7 +10,6 @@ const Button = ({ to, children, secondary, ...restProps }) => {
     display: 'inline-flex',
     border: 'none',
     borderRadius: '5px',
-    MarginBottom: '8px',
     background: secondary
       ? rgba(theme.colors.primary, 0.1)
       : theme.colors.primary,

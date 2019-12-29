@@ -139,7 +139,7 @@ export default function Index({ data: { site, allMdx } }) {
                 />
                 <Sidebar
                   title="About author"
-                  description="Favour Kelvin is a Front-end Web Developer.I build stuff at my free time"
+                  description="Favour Kelvin is a Front-end Web Developer.I love learning new stuff"
                 />
         <hr />
         </div>
