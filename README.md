@@ -46,7 +46,7 @@ A starter project in [Gatsby.js](https://www.gatsbyjs.org/) with [MDX](https://g
 - visit http://localhost:8000
 
 ## Production build
-- `gatsby build `
+- `gatsby serve `
 - visit http://localhost:9000
 
 ## Deploy using Surge
