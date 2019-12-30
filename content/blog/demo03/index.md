@@ -1,7 +1,7 @@
 ---
 slug: demo-03
 date: 2019-12-15
-title: 'Yummy lovers 🍨'
+title: 'Sweet Taste 🍨'
 description: 'Morbi ut dapibus sem. Interdum et malesuada fames ac ante ipsum primis in faucibus.'
 published: true
 banner: './banner.png'

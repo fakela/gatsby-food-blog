@@ -25,6 +25,7 @@ const Hero = () => {
         css={css`
           display: flex;
           flex-direction: column;
+          padding: 23px 40px;
         `}
       >
         <h1
@@ -37,7 +38,7 @@ const Hero = () => {
             max-width: ${rhythm(20)};
           `}
         >
-         Food Blog Sweet Taste😋 🥘😋
+         Food Blog
          
         </h1>
       </Container>
