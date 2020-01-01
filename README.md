@@ -49,7 +49,9 @@ A starter project in [Gatsby.js](https://www.gatsbyjs.org/) with [MDX](https://g
 - `gatsby serve `
 - visit http://localhost:9000
 
-## Deploy using Surge
-- `npm install -g surge`
-- `gatsby build`
-- `surge public/`
+## Deploy using firebase
+- `create a firebase account`
+- `npm install -g firebase-tools`
+- `firebase init`
+- `firebase deploy`
+All done! Once the deployment concludes, you can access your website using firebaseProjectId.firebaseapp.com or firebaseProjectId.web.app
