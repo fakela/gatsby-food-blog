@@ -11,15 +11,7 @@ import {
 export default ({ data: { site, allMdx, latestArticle } }) => {
   return (
     <Layout site={site} noSubscribeForm>
-      <div>
-        <Message
-          fullscreen
-          illustration={PleaseConfirmIllustration}
-          title={`Great 😀,one more thing...`}
-          body={`An email has been sent with the confirmation link. 
-          **Please check your inbox!**`}
-        />
-      </div>
+      
       <div>
         {latestArticle.edges.map(({ node: post }) => (
           <Message
@@ -39,7 +31,7 @@ export default ({ data: { site, allMdx, latestArticle } }) => {
           illustration={UnsubscribeIllustration}
           title={`You have been unsubscribed 😞.`}
           body={`As per your request, you have been unsubscribed from all our mailing list.`}
-          note={`Changed your mind?😉 [Click here to resubscribe](#)`}
+          note={`Changed your mind?😉 [Click here to resubscribe](/subscribe)`}
         />
       </div>
     </Layout>
