@@ -1,5 +1,5 @@
 import { css } from '@emotion/core'
-import { useTheme } from '../components/Theming'
+import { useTheme } from '../components/theming'
 import typography, { fonts } from '../lib/typography'
 
 const ResetStyles = () => {
