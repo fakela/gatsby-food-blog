@@ -1,7 +1,7 @@
-import React from 'react'
-import { css, keyframes } from '@emotion/core'
-import { fonts } from '../../lib/typography'
-import { useTheme } from '../theming'
+import React from 'react';
+import { css, keyframes } from '@emotion/core';
+import { fonts } from '../../lib/typography';
+import { useTheme } from '../theming';
 
 // PleaseConfirmIllustration
 const PaperRollOut = keyframes`

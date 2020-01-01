@@ -1,8 +1,8 @@
-import React from 'react'
-import Button from './Button'
-import styled from '@emotion/styled'
-import { FiMoon, FiSun } from 'react-icons/fi'
-import { useTheme } from '../theming'
+import React from 'react';
+import Button from './button';
+import styled from '@emotion/styled';
+import { FiMoon, FiSun } from 'react-icons/fi';
+import { useTheme } from '../theming';
 
 const DarkMode = styled(FiMoon)({
   display: 'flex',

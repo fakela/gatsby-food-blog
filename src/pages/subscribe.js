@@ -1,8 +1,8 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
-import Container from '../components/Container'
-import Subscribe from '../components/Forms/Subscribe'
+import React from 'react';
+import { graphql } from 'gatsby';
+import Layout from '../components/layout';
+import Container from '../components/container';
+import Subscribe from '../components/forms/subscribe';
 
 export default ({ data: { site } }) => (
   <Layout site={site} noFooter>

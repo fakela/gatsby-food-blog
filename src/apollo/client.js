@@ -1,5 +1,5 @@
-import ApolloClient from 'apollo-boost'
-import fetch from 'isomorphic-fetch'
+import ApolloClient from 'apollo-boost';
+import fetch from 'isomorphic-fetch';
 
 // Get the URI for Apollo backend from .env file or use localhost
 const API_URI =

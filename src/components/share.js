@@ -1,7 +1,7 @@
-import React from 'react'
-import { css } from '@emotion/core'
-import { useTheme } from './theming'
-import { Twitter, LinkedIn} from './social'
+import React from 'react';
+import { css } from '@emotion/core';
+import { useTheme } from './theming';
+import { Twitter, LinkedIn} from './social';
 
 
 const Share = ({ url, title, twitterHandle }) => {

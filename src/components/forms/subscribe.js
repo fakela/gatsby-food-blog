@@ -1,9 +1,8 @@
-import React, { useState } from 'react'
-import { Link } from 'gatsby'
-import { Mutation } from 'react-apollo'
-import gql from 'graphql-tag'
-
-import Container from '../container'
+import React, { useState } from 'react';
+import { Link } from 'gatsby';
+import { Mutation } from 'react-apollo';
+import gql from 'graphql-tag';
+import Container from '../container';
 
 
 // Just like on the server, we need to define what our data model
@@ -32,7 +31,9 @@ const SubscribeForm = () => {
   return (
     <Container>
       
-      <h1>Subscribe 👍</h1>
+      <h1>Subscribe<span role="img" aria-label="guitar">
+      👍
+</span> </h1>
       <p>Please fill out the form below:</p>
 
       {/* Wrap the whole form in a Mutation component */}

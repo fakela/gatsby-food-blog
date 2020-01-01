@@ -1,14 +1,14 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import { css } from '@emotion/core'
-import styled from '@emotion/styled'
-import Layout from 'components/Layout'
-import Link from 'components/Link'
-import { useTheme } from 'components/Theming'
-import Container from 'components/Container'
-import { rhythm } from '../lib/typography'
-import Sidebar from 'components/Sidebar'
-import Img from 'gatsby-image'
+import React from 'react';
+import { graphql } from 'gatsby';
+import { css } from '@emotion/core';
+import styled from '@emotion/styled';
+import Layout from 'components/layout';
+import Link from 'components/link';
+import { useTheme } from 'components/theming';
+import Container from 'components/container';
+import { rhythm } from '../lib/typography';
+import Sidebar from 'components/sidebar';
+import Img from 'gatsby-image';
 
 const Hero = () => {
   const theme = useTheme()
@@ -108,7 +108,7 @@ export default function Index({ data: { site, allMdx } }) {
             >
               <div>
             <Img
-              sizes={post.frontmatter.banner. childImageSharp.sizes}
+              sizes={post.frontmatter.banner.childImageSharp.sizes}
               alt={post.frontmatter.title}
               style={{ width: "15%", marginRight: 20,float: "left" }}
             />
@@ -118,7 +118,9 @@ export default function Index({ data: { site, allMdx } }) {
                 to={post.frontmatter.slug}
                 aria-label={`View ${post.frontmatter.title}`}
               >
-                Read Article ➡️
+                Read Article <span role="img" aria-label="guitar">
+                ➡️
+</span>
               </Link>
             </Description>
           </div>

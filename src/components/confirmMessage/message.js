@@ -1,9 +1,9 @@
-import React from 'react'
-import { css, keyframes } from '@emotion/core'
-import styled from '@emotion/styled'
-import Markdown from 'react-markdown'
-import Link from '../link'
-import { bpMaxSM } from '../../lib/breakpoints'
+import React from 'react';
+import { css, keyframes } from '@emotion/core';
+import styled from '@emotion/styled';
+import Markdown from 'react-markdown';
+import Link from '../link';
+import { bpMaxSM } from '../../lib/breakpoints';
 
 export default ({
   illustration,

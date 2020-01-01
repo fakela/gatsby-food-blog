@@ -59,6 +59,7 @@ module.exports = {
     'gatsby-plugin-emotion',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-react-helmet',
+    'gatsby-remark-a11y-emoji',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {

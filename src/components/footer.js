@@ -1,9 +1,9 @@
-import React from 'react'
-import { css } from '@emotion/core'
-import { bpMaxSM } from '../lib/breakpoints'
-import SubscribeForm from './forms/Subscribe'
-import { Twitter, GitHub } from './social'
-import Container from './container'
+import React from 'react';
+import { css } from '@emotion/core';
+import { bpMaxSM } from '../lib/breakpoints';
+import SubscribeForm from './forms/subscribe';
+import { Twitter, GitHub } from './social';
+import Container from './container';
 
 const Footer = ({ author, noSubscribeForm }) => (
   <footer>

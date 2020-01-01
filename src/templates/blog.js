@@ -1,12 +1,12 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
-import { css } from '@emotion/core'
-import Container from 'components/Container'
-import SEO from '../components/SEO'
-import Layout from '../components/Layout'
-import Link from '../components/Link'
-import { bpMaxSM, bpMaxMD } from '../lib/breakpoints'
+import React from 'react';
+import { graphql } from 'gatsby';
+import Img from 'gatsby-image';
+import { css } from '@emotion/core';
+import Container from 'components/container';
+import SEO from '../components/seo';
+import Layout from '../components/layout';
+import Link from '../components/link';
+import { bpMaxSM, bpMaxMD } from '../lib/breakpoints';
 
 const Blog = ({
   data: { site, allMdx },
@@ -92,19 +92,25 @@ const Blog = ({
               to={`/${post.fields.slug}`}
               aria-label={`view "${post.frontmatter.title}" article`}
             >
-              Read Article ➡️
+              Read Article  <span role="img" aria-label="guitar">
+              ➡️
+</span>
             </Link>
           </div>
         ))}
         <div css={css({ marginTop: '30px' })}>
           {nextPagePath && (
             <Link to={nextPagePath} aria-label="View next page">
-              Next Page ➡️
+              Next Page <span role="img" aria-label="guitar">
+              ➡️
+</span>
             </Link>
           )}
           {previousPagePath && (
             <Link to={previousPagePath} aria-label="View previous page">
-              ⬅️ Previous Page
+             <span role="img" aria-label="guitar">
+             ⬅️ 
+</span> Previous Page
             </Link>
           )}
         </div>

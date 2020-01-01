@@ -1,6 +1,6 @@
-import { createTheming } from '@callstack/react-theme-provider'
-import { lighten } from 'polished'
-import colors from '../lib/colors'
+import { createTheming } from '@callstack/react-theme-provider';
+import { lighten } from 'polished';
+import colors from '../lib/colors';
 
 const themes = {
   default: {

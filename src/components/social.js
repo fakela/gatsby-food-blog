@@ -1,8 +1,8 @@
-import React from 'react'
-import Link from './link'
-import { useTheme } from './theming'
-import { css } from '@emotion/core'
-import config from '../../config/website'
+import React from 'react';
+import Link from './link';
+import { useTheme } from './theming';
+import { css } from '@emotion/core';
+import config from '../../config/website';
 
 export const Twitter = ({ url = `${config.twitter}` }) => {
   const theme = useTheme()

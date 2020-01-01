@@ -1,12 +1,11 @@
-import React from 'react'
-import { Link, StaticQuery, graphql } from 'gatsby'
-import { css } from '@emotion/core'
-import { useTheme } from '../theming'
-import { bpMaxSM } from '../../lib/breakpoints'
-import MobileMenu from './mobileMenu'
-import Links from './links'
-
-import Container from '../container'
+import React from 'react';
+import { Link, StaticQuery, graphql } from 'gatsby';
+import { css } from '@emotion/core';
+import { useTheme } from '../theming';
+import { bpMaxSM } from '../../lib/breakpoints';
+import MobileMenu from './mobileMenu';
+import Links from './links';
+import Container from '../container';
 
 const Header = ({ siteTitle }) => {
   const theme = useTheme()

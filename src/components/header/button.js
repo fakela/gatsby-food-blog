@@ -1,8 +1,8 @@
-import { React } from 'react'
-import { css } from '@emotion/core'
-import { Link } from 'gatsby'
-import { useTheme } from '../theming'
-import { rgba, darken } from 'polished'
+import { React } from 'react';
+import { css } from '@emotion/core';
+import { Link } from 'gatsby';
+import { useTheme } from '../theming';
+import { rgba, darken } from 'polished';
 
 const Button = ({ to, children, secondary, ...restProps }) => {
   const theme = useTheme()

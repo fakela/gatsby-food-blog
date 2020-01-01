@@ -1,7 +1,7 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import { useTheme } from '../theming'
-import ThemeToggler from './themeToggler'
+import React from 'react';
+import { Link } from 'gatsby';
+import { useTheme } from '../theming';
+import ThemeToggler from './themeToggler';
 
 export default () => {
   const theme = useTheme()
