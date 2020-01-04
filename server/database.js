@@ -3,10 +3,14 @@ import mongoose from 'mongoose'
 // Check for DATABASE_URL from .env, use localhost as a fallback
 const dbURL =
   process.env.DATABASE_URL ||
-  'mongodb://localhost:27017/checking'
+  'mongodb+srv://favourkelvin:favbaby@cluster0-5lgtg.mongodb.net/check'
 
 // Connect to MongoDB
-mongoose.connect(dbURL).catch((err) => {
+mongoose.connect(dbURL,{
+  useNewUrlParser: true,
+                useCreateIndex: true,
+                useUnifiedTopology: true
+}).catch((err) => {
   console.log(err)
 })
 
@@ -23,3 +27,4 @@ db.on('error', () => {
 })
 
 export default db
+
