@@ -1,6 +1,5 @@
 import mongoose from 'mongoose'
 
-
 const dbURL =
   process.env.DATABASE_URL ||
   'mongodb+srv://favourkelvin:favbaby@cluster0-5lgtg.mongodb.net/check'

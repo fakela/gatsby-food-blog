@@ -75,9 +75,9 @@
   "engines": {
     "node": "12.13.0"
   },
+  
   "keywords": [
-    "gatsby",
-    "heroku"
+    "gatsby"
   ],
   "license": "MIT",
   "main": "n/a",
