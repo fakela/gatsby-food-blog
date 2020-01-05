@@ -2,10 +2,10 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import Message from '../components/confirmMessage/message';
-import {
-  ThankYouIllustration,
-  UnsubscribeIllustration,
-} from '../components/ConfirmMessage/Illustrations'
+// import {
+//   ThankYouIllustration,
+//   UnsubscribeIllustration,
+// } from '../components/ConfirmMessage/Illustrations'
 
 export default ({ data: { site, allMdx, latestArticle } }) => {
   return (
@@ -16,7 +16,7 @@ export default ({ data: { site, allMdx, latestArticle } }) => {
           <Message
             fullscreen
             key={post.id}
-            illustration={ThankYouIllustration}
+            // illustration={ThankYouIllustration}
             title={`Welcome! Thank you!`}
             body={`In case you haven’t seen already, here’s my latest article:`}
             articleTitle={post.frontmatter.title}
@@ -27,7 +27,7 @@ export default ({ data: { site, allMdx, latestArticle } }) => {
       <div>
         <Message
           fullscreen
-          illustration={UnsubscribeIllustration}
+          // illustration={UnsubscribeIllustration}
           title={`You have been unsubscribed .`}
           body={`As per your request, you have been unsubscribed from all our mailing list.`}
           note={`Changed your mind?[Click here to resubscribe](/subscribe)`}
