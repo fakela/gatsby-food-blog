@@ -1,12 +1,9 @@
 import db from './database'
 
-// Define the database collection name as a constant, we could just as well
-// type in 'subscribers' everywhere that subscribersCollection is used, but
-// this way is cleaner.
+
 const subscribersCollection = 'subscribers'
 
-// This main function for adding a new subscriber to the database gets exported
-// for use elsewhere
+
 export const addSubscriber = async (args) => {
   // Check that this Email is unique from the database
   if (await checkForDuplicateEmail(subscribersCollection, args)) {

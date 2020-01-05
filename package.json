@@ -75,8 +75,17 @@
   "engines": {
     "node": "12.13.0"
   },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/fakela/gatsby-food-blog-starter"
+    }
+  ],
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "heroku"
   ],
   "license": "MIT",
   "main": "n/a",
