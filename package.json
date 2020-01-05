@@ -72,16 +72,20 @@
     "babel-preset-gatsby": "^0.2.20",
     "prettier": "1.18.2"
   },
+  "engines": {
+    "node": "12.13.0"
+  },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "heroku"
   ],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
-    "develop": "concurrently \"nodemon -r esm server/index.js\" \"gatsby develop\"",
+    "develop": "concurrently \"node -r esm server/index.js\" \"gatsby develop\"",
     "start": "serve public/",
-    "serve": "nodemon -r esm server/index.js",
+    "serve": "node -r esm server/index.js",
     "now-build": "npm run build"
   }
 }

@@ -8,8 +8,6 @@ const morgan = require('morgan')
 // Source the .env file if it exists
 require('dotenv').config()
 
-// Set fallbacks for GraphQL/Apollo URL, port, and CORS address
-// in case they are not present in a .env file
 const GQL_URL = process.env.GQL_URL || '/api/v1'
 const SERVE_PORT = process.env.GQL_PORT || 3000
 const CORS_ADDRESS = process.env.CORS_ADDRESS || '*'
