@@ -80,7 +80,7 @@
       "url": "heroku/nodejs"
     },
     {
-      "url": "https://github.com/fakela/gatsby-food-blog-starter"
+      "url": "https://github.com/heroku/heroku-buildpack-static"
     }
   ],
   "keywords": [
