@@ -92,6 +92,12 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-mailchimp`,
+      options: {
+        endpoint: `https://gmail.us4.list-manage.com/subscribe/post?u=a8abb2b47131d779df9c6296e&amp;id=64b80bae4f`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-feed`,
       options: {
         query: `

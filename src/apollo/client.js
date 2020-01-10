@@ -3,7 +3,7 @@ import fetch from 'isomorphic-fetch';
 
 // Get the URI for Apollo backend from .env file or use localhost
 const API_URI =
-  process.env.GATSBY_API_URI || '/api/v1'
+  process.env.GATSBY_API_URI || 'https://evening-plateau-59451.herokuapp.com/api/v1'
 
 // Export the Apollo connection
 export const client = new ApolloClient({
