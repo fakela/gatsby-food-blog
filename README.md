@@ -1,6 +1,8 @@
 # Fakela MDX Food Blog Starter Project
 
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c9ac63e4-56e0-4d31-a1c5-22ea022eccce/deploy-status)](https://app.netlify.com/sites/fakela-gatsby-foodblog/deploys)
+
 
 A starter project in [Gatsby.js](https://www.gatsbyjs.org/) with [MDX](https://github.com/mdx-js/mdx).
 
