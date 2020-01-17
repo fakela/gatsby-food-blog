@@ -17,31 +17,29 @@ A starter project in [Gatsby.js](https://www.gatsbyjs.org/) with [MDX](https://g
 - Self-hosted fonts ([Inter UI](https://rsms.me/inter/))
 - Social media share buttons
 - Site & Theme config files
-- ConvertKit subscribe form (Formik and Yup)
 - Customizable
 - Easy editable content in Markdown files (posts, pages and parts)
 - Easily restyled through theme object
-- RSS feed
 - Toggle theme mode
 - Social sharing (Twitter, Facebook)
 - PWA (manifest.json, offline support)
 - Prettier code styling
 - GraphQl
 
-## [➞ Demo](http://gatsby-fakela-food-blog.surge.sh/)
+## [➞ Demo](https://fakela-gatsby-foodblog.netlify.com/)
 
 ## Setup
 
-- `git clone https://github.com/fakela/gatsby-food-blog-starter.git`
-- `cd gatsby-food-blog-starter`
+- `git clone https://github.com/fakela/gatsby-food-blog.git`
+- `cd gatsby-food-blog`
 - `npm install`
 - `gatsby develop`
 - visit http://localhost:8000
 
 ## Setup via Gatsby CLI
 
-- `gatsby new gatsby-food-blog-starter https://github.com/fakela/gatsby-food-blog-starter.git`
-- `cd gatsby-food-blog-starter`
+- `gatsby new gatsby-food-blog-starter https://github.com/fakela/gatsby-food-blog.git`
+- `cd gatsby-food-blog`
 - `npm install`
 - `gatsby develop`
 - visit http://localhost:8000
