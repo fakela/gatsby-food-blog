@@ -46,7 +46,7 @@
     "gatsby-remark-images": "^3.1.28",
     "gatsby-remark-prismjs": "^3.3.20",
     "gatsby-source-filesystem": "^2.1.33",
-    "gatsby-transformer-remark": "^2.6.30",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.3.0",
     "isomorphic-fetch": "^2.2.1",
     "mongoose": "^5.8.3",
